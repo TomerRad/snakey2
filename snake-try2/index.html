@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Snakee</title>
+    <link rel="icon" type="image/x-icon" href="resources/snakeLogo.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Snake Game</h1>
+    <button id="start">Play</button>
+    <div id="cont">
+        <div id="dashboard">
+            <div id="scoreCont">
+                <img id="apple" src="resources/apple.png" alt="Current Score">
+                <h2 id="score">0</h2>
+            </div>
+
+            <div id="pbCont">
+                <h2 id="pb">0</h2>
+                <img id="goldenApple" src="resources/pb.gif" alt="Personal Best Score">
+            </div>
+        </div>
+        <div id="border">
+            <div style="background:url(resources/snakeLogo.jpeg);background-size: 100%;" id="gameCont">
+                <div id="died"></div>
+            </div>
+        </div>
+    </div>
+    <div class="sizeSlider">
+        <button id="resetSlider" type="button">Reset</button>
+        <input type="range" id="sizeSlider" min="100" max="700" value="550" step="1" />
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="setup.js"></script>
+    <script src="game.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
