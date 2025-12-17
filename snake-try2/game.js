@@ -21,11 +21,15 @@ const head = document.querySelector(".head")
 // }
 
 function firstCall(){
+    if(stop==false){
     setTimeout(function(){forward();secondCall()},100)
+}
 }
 
 function secondCall(){
+    if(stop==false){
     setTimeout(function(){forward();firstCall()},100)
+    }
 }
 body.addEventListener("keydown", function (e) {
     const key = e.key.toUpperCase()
