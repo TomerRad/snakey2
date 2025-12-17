@@ -30,7 +30,8 @@ function setup() {
     document.querySelector(".apple").style.left="calc(var(--gameSize)/15*"+applesCol[0]+")"
     document.querySelector(".apple").style.top="calc(var(--gameSize)/15*"+applesRow[0]+")"
     if(pressedOnce==false){
-        start()
+        // start()
+        firstCall()
     }
     $(".snake").css("scale","1")
     moveBody()

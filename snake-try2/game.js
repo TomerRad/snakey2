@@ -11,15 +11,22 @@ let applesRow = [7];
 let pb = 0;
 const body = document.querySelector("body")
 const head = document.querySelector(".head")
-function start() {
-    for (let i = 0; i < 100000; i++) {
-        setTimeout(function () {
-            if (stop) return;
-            forward()
-        }, i * 100)
-    }
+// function start() {
+//     for (let i = 0; i < 100000; i++) {
+//         setTimeout(function () {
+//             if (stop) return;
+//             forward()
+//         }, i * 100)
+//     }
+// }
+
+function firstCall(){
+    setTimeout(function(){forward();secondCall()},100)
 }
 
+function secondCall(){
+    setTimeout(function(){forward();firstCall()},100)
+}
 body.addEventListener("keydown", function (e) {
     const key = e.key.toUpperCase()
     if (key == "W" && facing !== "down" && stop == false || key == "ARROWUP" && facing !== "down" && stop == false) {
